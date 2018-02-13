@@ -13,7 +13,6 @@ app.config(["$provide", "$compileProvider", "$controllerProvider", "$filterProvi
         app.constant = $provide.constant;
     }]);
 app.config(function ($httpProvider) {
-
     $httpProvider.defaults.transformRequest = function (obj) {
         var str = [];
         for (var p in obj) {
