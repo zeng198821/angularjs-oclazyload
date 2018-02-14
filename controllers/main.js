@@ -5,7 +5,9 @@
 (function () {
     "use strict"
     app.controller("mainCtrl", mainCtrlFn);
-    function mainCtrlFn() {
-        this.value = "Hello World";
+    function mainCtrlFn($stateParams) {
+        console.log(this);
+        var tmpParas = $stateParams;
+        this.value = "Hello World" + tmpParas.mid;
     }
 }())

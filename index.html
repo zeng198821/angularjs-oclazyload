@@ -13,8 +13,9 @@
 <body ng-app="pkcms">
 
     <div>
-        <a href="#/main">主页</a>
-        <a href="#/adminUser" >admin user</a>
+        <a ui-sref="main({mid:'123'})">主页</a>
+        <button ui-sref="main({mid:'456'})">aaa</button>
+        <a ui-sref=".adminUser" >admin user</a>
     </div>
     <div ui-view></div>
 </body>

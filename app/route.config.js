@@ -1,10 +1,11 @@
 ﻿"use strict"
 app.config(["$stateProvider","$urlRouterProvider",routeFn]);
 function routeFn($stateProvider,$urlRouterProvider){
-    $urlRouterProvider.otherwise("/main");
+    $urlRouterProvider.otherwise(".main?mid=123");
     $stateProvider
         .state("main",{
             url:"/main",
+            params:{"mid":null},
             templateUrl:"views/main.html",
             controller:"mainCtrl",
             controllerAs:"main",

@@ -4,7 +4,10 @@
  */
 (function () {
     app.controller('adminUserCtrl',adminUserCtrlFn);
-    function adminUserCtrlFn() {
+    function adminUserCtrlFn($state) {
         this.value = "welcome to admin user";
+        this.jump = function () {
+            $state.go('main',{'mid':789});
+        }
     }
 }());
